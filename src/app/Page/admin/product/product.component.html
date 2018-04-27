@@ -1,0 +1,54 @@
+<table>
+    <tr>
+        <th style="width:3rem;">ID</th>
+        <th>Tên sản phẩm</th>
+        <th>Code</th>
+        <th>Loại</th>
+        <th>Giá</th>
+        <th>Nhà Sản Xuất</th>
+        <th>Mô tả</th>
+        <th>Link Hình ảnh</th>
+        <th>Màu sắc SP</th>
+        <th>Các màu sắc của SP</th>
+        <th>RAM</th>
+        <th>ROM</th>
+        <th>Camera trước 1</th>
+        <th>Camera trước 2</th>
+        <th>Camera sau 1</th>
+        <th>Camera sau 2</th>
+        <th>CPU</th>
+        <th>Màn hinh</th>
+        <th>Hệ điều hành</th>
+        <th>Nhà cung cấp</th>
+        <th>Công ty sản xuất</th>
+        <th>Thao tác</th>
+    </tr>
+    <tr *ngFor="let prod of LstProduct"> 
+        <td style="width:3rem;"><input [(ngModel)]="prod.ID" style="width:3rem;"></td>
+        <td><input [(ngModel)]="prod.Name"></td>
+        <td><input [(ngModel)]="prod.Code"></td>
+        <td><input [(ngModel)]="prod.TypeName"></td>
+        <td><input [(ngModel)]="prod.Price"></td>
+        <td><input [(ngModel)]="prod.Supplier"></td>
+        <td><input [(ngModel)]="prod.Description.Design"></td>
+        <td><input [(ngModel)]="prod.Image[0].url"></td>
+        <td><input [(ngModel)]="prod.Color"></td>
+        <td><input [(ngModel)]="prod.Description.Color"></td>
+        <td><input [(ngModel)]="prod.Description.Specifications.RAM"></td>
+        <td><input [(ngModel)]="prod.Description.Specifications.ROM"></td>
+        <td><input [(ngModel)]="prod.Description.Specifications.FCamera1"></td>
+        <td><input [(ngModel)]="prod.Description.Specifications.FCamera2"></td>
+        <td><input [(ngModel)]="prod.Description.Specifications.BCamera1"></td>
+        <td><input [(ngModel)]="prod.Description.Specifications.BCamera2"></td>
+        <td><input [(ngModel)]="prod.Description.Specifications.CPU"></td>
+        <td><input [(ngModel)]="prod.Description.Specifications.Screen"></td>
+        <td><input [(ngModel)]="prod.Description.Specifications.System"></td>
+        <td><input [(ngModel)]="prod.Origin"></td>
+        <td><input [(ngModel)]="prod.Supplier"></td>
+        <td>
+            <button class="btn btn-success" (click)="Log(prod)">Cập nhật</button>
+            <button class="btn btn-danger">Xóa</button>
+        </td>
+    </tr>
+
+</table>
